@@ -1,3 +1,9 @@
+/* Implementar el conocido juego Piedra, Papel, Tijera ofreciendo:
+1. Modo Jugador vs Jugador
+2. Modo Jugador vs Maquina
+3. Al acabar, solicitar si se desea volver a jugar.
+BONUS: Implementar un marcador. */
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -7,11 +13,11 @@ int main() {
     printf("Bienvenido al juego Piedra, Papel o Tijera!\n");
 
     do {
-        printf("Elige una opciÛn:\n");
+        printf("Elige una opci√≥n:\n");
         printf("1. Jugador vs Jugador\n");
-        printf("2. Jugador vs M·quina\n");
+        printf("2. Jugador vs M√°quina\n");
         printf("3. Salir\n");
-        printf("Ingrese el n˙mero de la opciÛn: ");
+        printf("Ingrese el n√∫mero de la opci√≥n: ");
         scanf("%d", &opcion);
 
         if (opcion == 3) {
@@ -25,9 +31,9 @@ int main() {
             printf("Jugador 1, elige (1: Piedra, 2: Papel, 3: Tijera): ");
             scanf("%d", &jugador1);
             jugador2 = (rand() % 3) + 1;
-            printf("La m·quina elige: %d\n", jugador2);
+            printf("La m√°quina elige: %d\n", jugador2);
         } else {
-            printf("OpciÛn no v·lida. Elige nuevamente.\n");
+            printf("Opci√≥n no v√°lida. Elige nuevamente.\n");
             continue;
         }
 
