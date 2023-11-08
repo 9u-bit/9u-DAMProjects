@@ -1,7 +1,7 @@
 /* Sean dos dinosaurios que impiezan cada uno con 10 puntos de vida (HP), elaborar un programa que por turnos permita a cada dinosaurio las siguientes opciones:
-	1. Morder (Quitra 2 puntos de vida al otro dinosaurio)
-	2. Defender (El otro dinosaurio tiene un 50% de posibilidad de fallar el mordisco en su turno)
-	3. Huir (Se le da la victoria al otro dinosaurio)
+1. Morder (Quitra 2 puntos de vida al otro dinosaurio)
+2. Defender (El otro dinosaurio tiene un 50% de posibilidad de fallar el mordisco en su turno)
+3. Huir (Se le da la victoria al otro dinosaurio)
 El primer dinosaurio cuya vida llegue a 0, pierede */
 
 #include <stdio.h>
@@ -24,7 +24,7 @@ int main() {
     printf("Tienes el control del Dinosaurio 1.\n");
 
     while (dino1HP > 0 && dino2HP > 0) {
-        printf("Elige tu acción:\n");
+        printf("Elige tu acciÃ³n:\n");
         printf("1. Morder\n");
         printf("2. Defender\n");
         printf("3. Huir\n");
@@ -34,14 +34,14 @@ int main() {
 
         if (choice == 1) {
             dino2HP -= 2;
-            printf("¡Dinosaurio 1 ataca! Dinosaurio 2 pierde 2 HP.\n");
+            printf("Â¡Dinosaurio 1 ataca! Dinosaurio 2 pierde 2 HP.\n");
         } else if (choice == 2) {
             printf("Dinosaurio 1 se defiende. El ataque del dinosaurio 2 es menos eficaz.\n");
         } else if (choice == 3) {
-            printf("Dinosaurio 1 huye. ¡Dinosaurio 2 gana!\n");
+            printf("Dinosaurio 1 huye. Â¡Dinosaurio 2 gana!\n");
             break;
         } else {
-            printf("Elección no válida. Por favor, elija 1, 2 o 3.\n");
+            printf("ElecciÃ³n no vÃ¡lida. Por favor, elija 1, 2 o 3.\n");
         }
 
         if (dino2HP > 0) {
@@ -50,19 +50,19 @@ int main() {
             if (choice == 0) {
                 if (randomSuccess()) {
                     if (choice == 2) {
-                        printf("¡El ataque del Dinosaurio 2 es menos efectivo debido a la defensa del Dinosaurio 1!\n");
+                        printf("Â¡El ataque del Dinosaurio 2 es menos efectivo debido a la defensa del Dinosaurio 1!\n");
                         dino1HP -= 1;
                     } else {
                         dino1HP -= 2;
                     }
-                    printf("¡Dinosaurio 2 ataca! Dinosaurio 1 pierde 2 HP.\n");
+                    printf("Â¡Dinosaurio 2 ataca! Dinosaurio 1 pierde 2 HP.\n");
                 } else {
-                    printf("¡El ataque del Dinosaurio 2 falló!\n");
+                    printf("Â¡El ataque del Dinosaurio 2 fallÃ³!\n");
                 }
             } else if (choice == 2) {
                 printf("Dinosaurio 2 se defiende. El ataque del dinosaurio 1 es menos eficaz.\n");
             } else if (choice == 3) {
-                printf("Dinosaurio 2 huye. ¡Dinosaurio 1 gana!\n");
+                printf("Dinosaurio 2 huye. Â¡Dinosaurio 1 gana!\n");
                 break;
             }
         }
