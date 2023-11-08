@@ -1,3 +1,8 @@
+/* Realizar un programa que pida al usuario dos n煤meros por teclado y despu茅s solicite que se escoja de entre 4 operaciones: sumar, restar, multiplicar o dividir.
+En funci贸n de lo elegido se mostrar谩 por pantalla el resultado de la operaci贸n.
+Se debe permitir la repetici贸n del programa, dando opci贸n por pantalla al usuario de si "desea volver a hacer otra operaci贸n".
+Se debe vigilar que si el usuario mete como segundo n煤mero un cero y adem谩s elige una divisi贸n el programa le permita informarle en vez de fallar. */
+
 #include <stdio.h>
 
 int main() {
@@ -5,12 +10,12 @@ int main() {
     int repetir = 1;
 
     while (repetir) {
-        printf("Dime un n鷐ero: ");
+        printf("Dime un n煤mero: ");
         scanf("%d", &num1);
-        printf("Dime otro n鷐ero: ");
+        printf("Dime otro n煤mero: ");
         scanf("%d", &num2);
 
-        printf("Seleccione una operaci髇:\n");
+        printf("Seleccione una operaci贸n:\n");
         printf("1. Sumar\n");
         printf("2. Restar\n");
         printf("3. Multiplicar\n");
@@ -36,13 +41,13 @@ int main() {
                 }
                 break;
             default:
-                printf("Operaci髇 no v醠ida.\n");
+                printf("Operaci贸n no v谩lida.\n");
                 continue;
         }
 
         printf("El resultado es: %d\n", resultado);
 
-        printf("緿esea realizar otra operaci髇? (1 para repetir, 0 para salir): ");
+        printf("驴Desea realizar otra operaci贸n? (1 para repetir, 0 para salir): ");
         scanf("%d", &repetir);
 
         if (repetir != 1) {
