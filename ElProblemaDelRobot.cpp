@@ -1,3 +1,11 @@
+/* En un mundo circular y bidimensional de 10 x 10, un robot comienza en una posición dada por el usuario.
+1. El robot, puede moverse en las direcciones: norte, sur, este y oeste.
+2. El robot comienza con 100 unidades de gasolina.
+3. Cada vez que se mueve una casilla gasta 10 unidades de gasolina.
+4. Aleatoriamente, aparece en otra posición del mapa, un bidón de gasolina. Cada vez que el robot tome el bidón, recarga a 100 su depósito de gasolina.
+5. Se debe imprimir un mapa en caracteres ASCII indicando la posición del robot, así como una interfaz rudimentaria que muestre la posición, la gasolina restante y las opciones de movimiento al usuario. ç
+BONUS (v2.0): Implementar el programa utilizando arrays */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -32,7 +40,7 @@ void displayMap(int robotX, int robotY) {
 int main() {
     srand(time(NULL));
 
-    printf("Introduzca la posici�n inicial del robot (X Y): ");
+    printf("Introduzca la posición inicial del robot (X Y): ");
     fflush(stdin);
     scanf("%d %d", &robotX, &robotY);
     
@@ -45,7 +53,7 @@ int main() {
         displayMap(robotX, robotY);
         
         if (robotX == rX && robotY == rY) {
-            printf("�Has llegado al destino 'R'! El juego ha terminado.\n");
+            printf("¡Has llegado al destino 'R'! El juego ha terminado.\n");
             break;
         }
 
@@ -81,7 +89,7 @@ int main() {
         }
         
         if (rand() % 10 == 0) {
-            printf("Apareci� un bid�n de gasolina!\n");
+            printf("Apareció un bidón de gasolina!\n");
             gasoline = 100;
         }
     }
