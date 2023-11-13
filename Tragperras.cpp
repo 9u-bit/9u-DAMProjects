@@ -7,7 +7,7 @@ int main() {
     printf("Bienvenido a la tragaperras\n");
 
     while (saldo > 0) {
-        printf("\nSaldo actual: %d€\n", saldo);
+        printf("\nSaldo actual: %dâ‚¬\n", saldo);
         printf("Presiona Enter para lanzar la tragaperras (o 'q' para salir): ");
         getchar();
 
@@ -22,14 +22,14 @@ int main() {
                     break;
             }
 
-            printf("¡Has ganado %d€!\n", saldo);
+            printf("Â¡Has ganado %dâ‚¬!\n", saldo);
         } else {
             saldo -= 1;
-            printf("No has ganado nada. Inténtalo de nuevo.\n");
+            printf("No has ganado nada. IntÃ©ntalo de nuevo.\n");
         }
     }
 
-    printf("Gracias por jugar. Tu saldo final es: %d€\n", saldo);
+    printf("Gracias por jugar. Tu saldo final es: %dâ‚¬\n", saldo);
 
     return 0;
 }
